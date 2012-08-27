@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
-  has_many :products
-  attr_accessible :product_id, :total, :user_id
+  has_many :order_items
+  belongs_to :user
+  attr_accessible :user_id
 end
